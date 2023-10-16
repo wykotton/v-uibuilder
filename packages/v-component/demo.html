@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>v-component</title>
+    <script type="module" src="./src/main.ts"></script>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+  </style>
+  <body>
+  <div style="height: 300px">
+    <q-row style="height: 300px">
+      <q-col style="background: #40adff" span="24" id="Q-COLw7vms9hft4dl"></q-col>
+    </q-row>
+  </div>
+  </body>
+  <script type="module">
+    import BootStrap from "./src/types/runtime/BootStrap";
+    import { config } from "./src/dp/dp.js";
+
+    // import { moveable } from "./src/util/moveable/example";
+    // import $ from "jquery";
+    // window.moveableExample = new moveable();
+    // $("#inner-dropzone").on("mousedown", ".draggable2", (e) => {
+    // 	e.stopPropagation();
+    // 	e.preventDefault();
+    // 	moveableExample.setMoveableTarget(e);
+    // });
+
+    // import { addComponentMask, removeComponentMask } from "./src/util/moveable/mask";
+    // const maskSwitch = document.querySelector("#q-switch");
+    // maskSwitch.addEventListener("change", (e) => {
+    // 	e.stopPropagation();
+    // 	const elements = document.querySelectorAll(".draggable2");
+    // 	if (e.detail.value) {
+    // 		addComponentMask([...elements]);
+    // 	} else {
+    // 		removeComponentMask([...elements]);
+    // 	}
+    // });
+
+    // import { addLocking, removeLocking } from "./src/util/moveable/locking";
+    // const lockingSwitch = document.querySelector("#q-switch-locking");
+    // lockingSwitch.addEventListener("change", (e) => {
+    // 	e.stopPropagation();
+    // 	const elements = document.querySelectorAll(".draggable2");
+    // 	if (e.detail.value) {
+    // 		[...elements].forEach((item) => {
+    // 			addLocking(item, "all");
+    // 		});
+    // 	} else {
+    // 		[...elements].forEach((item) => {
+    // 			removeLocking(item, "all");
+    // 		});
+    // 	}
+    // });
+
+    // const bootStrap = new BootStrap("#component", config);
+  </script>
+  <style>
+    .draggable2 {
+      position: absolute;
+    }
+  </style>
+</html>
+<script type="application/javascript">
+  const node = document.getElementsByClassName("q-table");
+
+  for (const nodeElement of node) {
+    nodeElement.addEventListener("onTdClicked", (e) => {
+      const { row, column, index } = e.detail;
+      console.log(row, column, index);
+    });
+    nodeElement.addEventListener("onBtnClicked", (e) => {
+      const { row, column, index, type } = e.detail;
+      console.log(row, column, index, type);
+    });
+  }
+
+  const pageNode = document.getElementsByClassName("q-pagination");
+  for (const pageNodeElement of pageNode) {
+    pageNodeElement.addEventListener("pageChange", (e) => {
+      const { current } = e.detail;
+      console.log("分页当前页：", current);
+    });
+  }
+</script>

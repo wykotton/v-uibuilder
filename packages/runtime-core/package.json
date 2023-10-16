@@ -1,0 +1,35 @@
+{
+  "name": "@zzjz/v-uibuilder-runtime-core",
+  "version": "1.0.0",
+  "description": "业务探索工具运行库",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "vitest --ui",
+    "build": "tsc --noEmit && tsc -b"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.5.14",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^18.14.2",
+    "@vitest/ui": "^0.29.8",
+    "vitest": "^0.29.8"
+  },
+  "dependencies": {
+    "@vue/reactivity": "^3.2.47",
+    "@vue/runtime-core": "^3.2.47",
+    "@zzjz/v-uibuilder-types": "workspace:^1.0.0",
+    "ant-design-vue": "^3.2.15",
+    "axios": "^0.27.2",
+    "broadcast-channel": "^4.18.0",
+    "jquery": "^3.6.0",
+    "json-fn": "^1.1.1",
+    "jsonpath-plus": "^7.2.0",
+    "lit": "^2.0.2",
+    "lodash-es": "^4.17.21",
+    "socket.io-client": "^4.5.3",
+    "style-to-object": "^0.3.0"
+  }
+}

@@ -1,0 +1,84 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    height: 12px !important;
+    width: 12px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px !important;
+    border-style: dashed;
+    background-color: rgb(156, 157, 160);
+    border-color: transparent;
+    background-clip: content-box;
+    cursor: pointer;
+  }
+}
+
+.router-container {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .search-input {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+  }
+}
+
+.router-list {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+
+  .info {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+
+    .title {
+      width: 100%;
+      font-weight: 600;
+      color: #666666;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .label {
+      width: 100%;
+      padding: 0 6px;
+      margin-top: 4px;
+      border-radius: 2px;
+      background-color: #eaebef;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .router-btn {
+    width: 90px;
+    min-width: 90px;
+  }
+}

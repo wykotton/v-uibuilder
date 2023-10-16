@@ -1,0 +1,168 @@
+{
+  "headerEdit": [
+    {
+      "key": "1",
+      "name": "主题",
+      "leftIcon": "s-platform",
+      "rightIcon": "arrow-down",
+      "dataList": [
+        {
+          "key": "1-1",
+          "name": "主题色",
+          "icon": "edit",
+          "show": false
+        },
+        {
+          "key": "1-2",
+          "name": "背景色",
+          "icon": "s-grid",
+          "show": false
+        },
+        {
+          "key": "1-5",
+          "name": "网格",
+          "icon": "tickets",
+          "show": false
+        }
+      ]
+    },
+    {
+      "key": "2",
+      "name": "对齐",
+      "leftIcon": "s-operation",
+      "rightIcon": "arrow-down",
+      "dataList": [
+        {
+          "key": "2-1",
+          "name": "左对齐",
+          "icon": "back",
+          "show": false
+        },
+        {
+          "key": "2-2",
+          "name": "右对齐",
+          "icon": "right",
+          "show": false
+        },
+        {
+          "key": "2-3",
+          "name": "顶端对齐",
+          "icon": "top",
+          "show": false
+        },
+        {
+          "key": "2-4",
+          "name": "底端对齐",
+          "icon": "bottom",
+          "show": false
+        },
+        {
+          "key": "2-5",
+          "name": "水平居中",
+          "icon": "tickets",
+          "show": false
+        },
+        {
+          "key": "2-6",
+          "name": "垂直居中",
+          "icon": "edit",
+          "show": false
+        },
+        {
+          "key": "2-7",
+          "name": "横向分布",
+          "icon": "s-grid",
+          "show": false
+        },
+        {
+          "key": "2-8",
+          "name": "纵向分布",
+          "icon": "film",
+          "show": false
+        },
+        {
+          "key": "2-9",
+          "name": "等高",
+          "icon": "data-line",
+          "show": false
+        },
+        {
+          "key": "2-10",
+          "name": "等宽",
+          "icon": "tickets",
+          "show": false
+        },
+        {
+          "key": "2-11",
+          "name": "等尺寸",
+          "icon": "tickets",
+          "show": false
+        }
+      ]
+    },
+    {
+      "key": "3",
+      "name": "工具",
+      "leftIcon": "s-shop",
+      "rightIcon": "arrow-down",
+      "dataList": [
+        {
+          "key": "3-1",
+          "name": "开启全屏",
+          "icon": "rank",
+          "show": false
+        }
+      ]
+    },
+    {
+      "key": "4",
+      "name": "重置",
+      "leftIcon": "refresh-right",
+      "rightIcon": "arrow-down",
+      "dataList": [
+        {
+          "key": "4-1",
+          "name": "重置布局",
+          "icon": "rank",
+          "show": false
+        },
+        {
+          "key": "4-2",
+          "name": "重置主题",
+          "icon": "rank",
+          "show": false
+        },
+        {
+          "key": "4-3",
+          "name": "撤销",
+          "icon": "rank",
+          "show": false
+        },
+        {
+          "key": "4-4",
+          "name": "重做",
+          "icon": "rank",
+          "show": false
+        }
+      ]
+    }
+  ],
+  "headerConfig": [
+    {
+      "key": 1,
+      "name": "打开"
+    },
+    {
+      "key": 2,
+      "name": "仓库配置"
+    },
+    {
+      "key": 3,
+      "name": "保存"
+    },
+    {
+      "key": 4,
+      "name": "发布"
+    }
+  ]
+}

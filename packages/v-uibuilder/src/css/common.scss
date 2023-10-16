@@ -1,0 +1,35 @@
+.focus {
+  outline: var(--force-border) !important;
+  box-shadow: var(--force-box-shadow) !important;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.focusBind {
+  outline: 5px solid #409eff !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #409eff !important;
+  z-index: 100000 !important;
+  color: #fff !important;
+}
+
+.focusWarning {
+  /* border: 5px solid #faad14 !important; */
+  padding: 5px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background-color: #faad14 !important;
+  z-index: 2999 !important;
+  color: #fff !important;
+}
+
+.focusError {
+  /* border: 5px solid red !important; */
+  padding: 5px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background-color: red !important;
+  z-index: 2999 !important;
+  color: #fff !important;
+}

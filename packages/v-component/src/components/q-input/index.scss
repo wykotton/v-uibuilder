@@ -1,0 +1,427 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+:host {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+:host([block]) {
+  display: block;
+}
+
+@include b(textarea) {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  vertical-align: bottom;
+  //   font-size: $--font-size-base;
+  font-size: inherit;
+
+  @include e(inner) {
+    width: 100%;
+    height: 100%;
+    min-height: 40px;
+    display: block;
+    resize: none;
+    padding: 5px 15px;
+    line-height: inherit;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    background-color: inherit;
+    background-image: none;
+    border: inherit;
+    border-radius: inherit;
+    text-align: inherit;
+    letter-spacing: inherit;
+    transition: $--border-transition-base;
+
+    &::placeholder {
+      color: $--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: $--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+
+    &::-webkit-scrollbar {
+      height: 9px !important;
+      width: 9px !important;
+    }
+    &::-webkit-scrollbar-corner {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-style: dashed;
+      border-color: transparent;
+      background-clip: content-box;
+      background-color: #9c9da0;
+      -webkit-border-radius: 2em;
+      -moz-border-radius: 2em;
+      border-radius: 2em;
+      cursor: pointer;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      -webkit-border-radius: 2em;
+      -moz-border-radius: 2em;
+      border-radius: 2em;
+    }
+  }
+
+  & .q-input_suffix {
+    position: absolute;
+    height: 100%;
+    right: 5px;
+    top: 0;
+    text-align: center;
+    color: $--input-icon-color;
+    transition: all 0.3s;
+    // pointer-events: none;
+    display: flex;
+    align-items: center;
+  }
+
+  & .q-input_clear {
+    color: $--input-icon-color;
+    font-size: $--input-font-size;
+    cursor: pointer;
+    transition: $--color-transition-base;
+
+    &:hover {
+      color: $--input-clear-hover-color;
+    }
+  }
+
+  & .q-input_count {
+    color: $--color-info;
+    background: $--color-white;
+    position: absolute;
+    font-size: 12px;
+    bottom: 5px;
+    right: 10px;
+  }
+
+  @include when(disabled) {
+    .q-textarea_inner {
+      cursor: not-allowed;
+
+      &::placeholder {
+        color: $--input-disabled-placeholder-color;
+      }
+    }
+  }
+
+  @include when(exceed) {
+    .q-textarea_inner {
+      border-color: $--color-danger;
+    }
+
+    .q-input_count {
+      color: $--color-danger;
+    }
+  }
+}
+
+@include b(input) {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // font-size: $--font-size-base;
+  font-size: inherit;
+  // display: inline-block;
+  // width: 100%;
+  @include scroll-bar;
+
+  & .q-input_clear {
+    color: $--input-icon-color;
+    font-size: $--input-font-size;
+    cursor: pointer;
+    transition: $--color-transition-base;
+
+    &:hover {
+      color: $--input-clear-hover-color;
+    }
+  }
+
+  & .q-input_count {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    color: $--color-info;
+    font-size: 12px;
+
+    .q-input_count-inner {
+      background: $--color-white;
+      line-height: initial;
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+
+  @include e(inner) {
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    background-color: inherit;
+    background-image: none;
+    border-radius: inherit;
+    border: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    display: inline-block;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    //height: $--input-height;
+    line-height: inherit;
+    letter-spacing: inherit;
+    outline: none;
+    padding: 0 15px;
+    transition: $--border-transition-base;
+
+    &::-ms-reveal {
+      display: none;
+    }
+
+    &::placeholder {
+      color: $--input-placeholder-color;
+    }
+
+    &:hover {
+      border-color: $--input-hover-border;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+  }
+
+  @include e(suffix) {
+    position: absolute;
+    height: 100%;
+    right: 5px;
+    top: 0;
+    text-align: center;
+    color: $--input-icon-color;
+    transition: all 0.3s;
+    // pointer-events: none;
+    display: flex;
+    align-items: center;
+  }
+
+  @include e(suffix-inner) {
+    pointer-events: all;
+  }
+
+  @include e(prefix) {
+    position: absolute;
+    height: 100%;
+    left: 5px;
+    top: 0;
+    text-align: center;
+    color: $--input-icon-color;
+    transition: all 0.3s;
+  }
+
+  @include e(icon) {
+    height: 100%;
+    width: 25px;
+    text-align: center;
+    transition: all 0.3s;
+    line-height: $--input-height;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  @include e(validateIcon) {
+    pointer-events: none;
+  }
+
+  @include when(active) {
+    .q-input_inner {
+      outline: none;
+      border-color: $--input-focus-border;
+    }
+  }
+
+  @include when(disabled) {
+    .q-input_inner {
+      cursor: not-allowed;
+
+      &::placeholder {
+        color: $--input-disabled-placeholder-color;
+      }
+    }
+
+    .q-input_icon {
+      cursor: not-allowed;
+    }
+  }
+
+  @include when(exceed) {
+    .q-input_inner {
+      border-color: $--color-danger;
+    }
+
+    .q-input_suffix {
+      .q-input_count {
+        color: $--color-danger;
+      }
+    }
+  }
+
+  @include m(suffix) {
+    .q-input_inner {
+      padding-right: 30px;
+    }
+  }
+
+  @include m(prefix) {
+    .q-input_inner {
+      padding-left: 30px;
+    }
+  }
+
+  @include m(medium) {
+    font-size: $--input-medium-font-size;
+
+    @include e(inner) {
+      height: $--input-medium-height;
+      line-height: $--input-medium-height;
+    }
+
+    .q-input_icon {
+      line-height: $--input-medium-height;
+    }
+  }
+  @include m(small) {
+    font-size: $--input-small-font-size;
+
+    @include e(inner) {
+      height: $--input-small-height;
+      line-height: $--input-small-height;
+    }
+
+    .q-input_icon {
+      line-height: $--input-small-height;
+    }
+  }
+  @include m(mini) {
+    font-size: $--input-mini-font-size;
+
+    @include e(inner) {
+      height: $--input-mini-height;
+      line-height: $--input-mini-height;
+    }
+
+    .q-input_icon {
+      line-height: $--input-mini-height;
+    }
+  }
+}
+
+@include b(input-group) {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  > .q-input_inner {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  @include e((append, prepend)) {
+    background-color: $--background-color-base;
+    color: $--color-info;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    border: $--border-base;
+    border-radius: $--input-border-radius;
+    padding: 0 20px;
+    width: 1px;
+    white-space: nowrap;
+
+    &:focus {
+      outline: none;
+    }
+
+    .q-select,
+    .q-button {
+      display: inline-block;
+      margin: -10px -20px;
+    }
+
+    button.q-button,
+    div.q-select .q-input_inner,
+    div.q-select:hover .q-input_inner {
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+      border-top: 0;
+      border-bottom: 0;
+    }
+
+    .q-button,
+    .q-input {
+      font-size: inherit;
+    }
+  }
+
+  @include e(prepend) {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @include e(append) {
+    border-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @include m(prepend) {
+    .q-input_inner {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .q-select .q-input.is-focus .q-input_inner {
+      border-color: transparent;
+    }
+  }
+
+  @include m(append) {
+    .q-input_inner {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .q-select .q-input.is-focus .q-input_inner {
+      border-color: transparent;
+    }
+  }
+}
+
+/** disalbe default clear on IE */
+.q-input_inner::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}

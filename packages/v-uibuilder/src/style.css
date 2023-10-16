@@ -1,0 +1,87 @@
+@import "ant-design-vue/dist/antd.min.css";
+/* @import 'ant-design-vue/es/message/style/index.css';
+@import 'ant-design-vue/es/notification/style/index.css'; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "icons";
+  src: url("./assets/fonts/q-icons.woff") format("woff"),
+    /* chrome, firefox */ url("./assets/fonts/q-icons.ttf") format("truetype"); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  font-weight: normal;
+  font-display: auto;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  height: 8px !important;
+  width: 8px !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0 !important;
+  border-style: dashed;
+  background-color: rgb(156, 157, 160);
+  border-color: transparent;
+  background-clip: content-box;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9c9da0;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-color);
+  background-color: var(--theme-color);
+  border-radius: 6px !important;
+}
+
+/* .nodraggable{
+    z-index: 9!important;
+} */
+
+.cmd-dialog-root .ant-modal {
+  padding: 0;
+}
+.cmd-dialog-root .modal-body-div {
+  overflow: auto;
+  position: relative;
+}
+.cmd-dialog-root .modal-body-div::-webkit-scrollbar {
+  height: 8px !important;
+  width: 8px !important;
+}
+
+.cmd-dialog-root .modal-body-div::-webkit-scrollbar-thumb {
+  border-radius: 0 !important;
+  border-style: dashed;
+  background-color: rgb(156, 157, 160);
+  border-color: transparent;
+  background-clip: content-box;
+  cursor: pointer;
+}
+
+.cmd-dialog-root .modal-body-div::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-color);
+  border-radius: 6px !important;
+}
+
+.cmd-dialog-root .modal-body-div::-webkit-scrollbar-track {
+  background-color: transparent;
+}

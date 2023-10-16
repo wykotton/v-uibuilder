@@ -1,0 +1,24 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+:host {
+  display: block;
+}
+
+.q-percentage {
+  width: 100%;
+  height: 100%;
+
+  .q-percentage-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    #q-percentage-slot {
+      width: 100%;
+      height: 100%;
+      display: block;
+      overflow: hidden;
+    }
+  }
+}

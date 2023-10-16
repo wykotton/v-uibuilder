@@ -1,0 +1,11 @@
+:root {
+	--vp-c-blue: #60aeff;
+	--vp-c-brand: var(--vp-c-blue);
+}
+
+/* .source{
+	box-sizing: border-box;
+	padding: 24px;
+	transition: 0.2s;
+	overflow: auto;
+} */

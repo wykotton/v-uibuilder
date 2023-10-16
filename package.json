@@ -1,0 +1,63 @@
+{
+	"name": "v-uibuilder",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"workspaces": [
+		"packages/*",
+		"docs"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "npm-run-all --parallel v-uibuilder:dev v-uibuilder-server:dev v-file-server:dev v-component:dev",
+		"build": "npm-run-all --parallel v-uibuilder:build v-component:build v-uibuilder-server:build v-file-server:build docs:build",
+		"build:test": "npm-run-all --parallel v-uibuilder:build-test v-component:build-test v-uibuilder-server:build-test v-file-server:build-test docs:build",
+		"build:prod": "npm-run-all --parallel v-uibuilder:build-prod v-component:build-prod v-uibuilder-server:build-prod v-file-server:build-prod docs:build",
+		
+		"v-uibuilder:dev": "pnpm run --filter @zzjz/v-uibuilder-designer dev",
+		"v-uibuilder-server:dev": "pnpm run --filter @zzjz/v-uibuilder-server start:dev",
+		"v-file-server:dev": "pnpm run --filter @zzjz/v-file-server start:dev",
+		"v-component:dev": "pnpm run --filter @zzjz/v-component dev",
+		
+		"v-uibuilder:build": "pnpm run --filter @zzjz/v-uibuilder-designer build",
+		"v-uibuilder-server:build": "pnpm run --filter @zzjz/v-uibuilder-server build",
+		"v-file-server:build": "pnpm run --filter @zzjz/v-file-server build",
+		"v-component:build": "pnpm run --filter @zzjz/v-component build",
+
+		"v-uibuilder-server:build-dev": "pnpm run --filter @zzjz/v-uibuilder-server build:dev",
+		
+		"v-uibuilder:build-test": "pnpm run --filter @zzjz/v-uibuilder-designer build:test",
+		"v-uibuilder-server:build-test": "pnpm run --filter @zzjz/v-uibuilder-server build:test",
+		"v-file-server:build-test": "pnpm run --filter @zzjz/v-file-server build:test",
+		"v-component:build-test": "pnpm run --filter @zzjz/v-component build:test",
+		
+		"v-uibuilder:build-prod": "pnpm run --filter @zzjz/v-uibuilder-designer build:prod",
+		"v-uibuilder-server:build-prod": "pnpm run --filter @zzjz/v-uibuilder-server build:prod",
+		"v-file-server:build-prod": "pnpm run --filter @zzjz/v-file-server build:prod",
+		"v-component:build-prod": "pnpm run --filter @zzjz/v-component build:prod",
+		
+		"docs:dev": "pnpm run -C docs dev",
+		"docs:build": "pnpm run -C docs build",
+		"docs:serve": "pnpm run -C docs serve",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": ["eslint --fix"],
+		"*.vue": ["eslint --fix"]
+	}, 
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^18.0.6",
+		"father-build": "^1.22.3",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.2",
+		"npm-run-all": "^4.1.5",
+		"pnpm": "^7.5.2"
+	},
+	"dependencies": {
+		"metismenujs": "^1.3.1",
+		"xss": "^1.0.14"
+	}
+}

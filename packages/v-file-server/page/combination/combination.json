@@ -1,0 +1,812 @@
+{
+  "1": [
+    {
+      "componentName": "my-component",
+      "text": "123",
+      "type": "123",
+      "group": [
+        "我的元件"
+      ],
+      "options": {
+        "_initStyle": "height: 358px; width: 242px; background-color: rgb(255, 255, 255); position: absolute; left: 435px; top: 126px;",
+        "initStyle": "height: 358px; width: 242px; background-color: rgb(255, 255, 255); position: absolute; left: 435px; top: 126px;",
+        "_onMessageMeta": {},
+        "_onDOMEvent": {},
+        "_onWatchSetting": {},
+        "_lifeCycle": {
+          "created":"function() {}",
+          "updated":"function() {}",
+          "destroy":"function() {}"
+        },
+        "_contextType": false,
+        "_attrBindRelationship": [],
+        "onMessageMeta": {},
+        "onDOMEvent": {},
+        "onWatchSetting": {},
+        "lifeCycle": {
+          "created":"function() {}",
+          "updated":"function() {}",
+          "destroy":"function() {}"
+        },
+        "contextType": false,
+        "attrBindRelationship": [],
+        "_iovSchema": {
+          "componentName": "q-combination",
+          "type": "容器",
+          "text": "元件集合",
+          "group": [
+            "UIB原子元件"
+          ],
+          "image": "",
+          "description": "元件集合组件,用于包裹组件集合",
+          "eventSpecification": {
+            "inputMessage": [],
+            "outputMessage": []
+          },
+          "optionsView": {
+            "model": {
+              "description": "组件model",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "组件id",
+                  "disabled": true
+                }
+              }
+            }
+          }
+        },
+        "iovSchema": {
+          "componentName": "q-combination",
+          "type": "容器",
+          "text": "元件集合",
+          "group": [
+            "UIB原子元件"
+          ],
+          "image": "",
+          "description": "元件集合组件,用于包裹组件集合",
+          "eventSpecification": {
+            "inputMessage": [],
+            "outputMessage": []
+          },
+          "optionsView": {
+            "model": {
+              "description": "组件model",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "组件id",
+                  "disabled": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "children": [
+        {
+          "options": {
+            "_initStyle": "position: absolute; left: 92px; top: 208px; height: 150px; width: 150px;",
+            "initStyle": "position: absolute; left: 92px; top: 208px; height: 150px; width: 150px;",
+            "_onMessageMeta": {
+              "changeInfo": [
+                "function(e) {console.log(e, self);}"
+              ]
+            },
+            "_onDOMEvent": {
+              "click": [
+                "function(e) {console.log(e);}"
+              ],
+              "dblclick": [
+                "function(e) {console.log(e, `dblclick`);}"
+              ]
+            },
+            "_onWatchSetting": {
+              "prop": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text2": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "onDOMEvent": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context, `onDOMEvent`);}"
+              ]
+            },
+            "_lifeCycle": {
+              "created":"function() {console.log(\"created\");}",
+              "updated":"function() {console.log(\"updated\");}",
+              "destroy":"function() {console.log(\"destroy\");}"
+            },
+            "_contextType": false,
+            "_attrBindRelationship": [],
+            "onMessageMeta": {
+              "changeInfo": [
+                "function(e) {console.log(e, self);}"
+              ]
+            },
+            "onDOMEvent": {
+              "click": [
+                "function(e) {console.log(e);}"
+              ],
+              "dblclick": [
+                "function(e) {console.log(e, `dblclick`);}"
+              ]
+            },
+            "onWatchSetting": {
+              "prop": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text2": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "onDOMEvent": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context, `onDOMEvent`);}"
+              ]
+            },
+            "lifeCycle": {
+              "created":"function() {console.log(\"created\");}",
+              "updated":"function() {console.log(\"updated\");}",
+              "destroy":"function() {console.log(\"destroy\");}"
+            },
+            "contextType": false,
+            "attrBindRelationship": [],
+            "_iovSchema": {
+              "componentName": "q-text",
+              "type": "文本",
+              "text": "文本组件",
+              "group": [
+                "UIB原子元件"
+              ],
+              "image": "",
+              "description": "文本组件,可以编写文字信息",
+              "eventSpecification": {
+                "inputMessage": [
+                  {
+                    "text": "更改组件数据",
+                    "eventType": "changeInfo",
+                    "messageSchema": "",
+                    "messageDemo": ""
+                  }
+                ],
+                "outputMessage": [
+                  {
+                    "text": "组件点击数据",
+                    "eventType": "click",
+                    "messageSchema": "",
+                    "messageDemo": "文本数据1"
+                  }
+                ]
+              },
+              "optionsView": {
+                "model": {
+                  "description": "组件model",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "组件id",
+                      "disabled": true
+                    },
+                    "text": {
+                      "type": "string",
+                      "description": "组件文本数据"
+                    },
+                    "contextType": {
+                      "type": "boolean",
+                      "description": "contextType"
+                    },
+                    "_onMessageMeta": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "changeInfo": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onWatchSetting": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "text": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onDOMEvent": {
+                      "type": "object",
+                      "description": "DOM事件",
+                      "properties": {
+                        "click": {
+                          "type": "array",
+                          "description": "点击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        },
+                        "dblclick": {
+                          "type": "array",
+                          "description": "双击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_lifeCycle": {
+                      "type": "object",
+                      "description": "生命周期",
+                      "properties": {
+                        "created": {
+                          "type": "string",
+                          "description": "创建",
+                          "format": "textarea"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "description": "更新",
+                          "format": "textarea"
+                        },
+                        "destroy": {
+                          "type": "string",
+                          "description": "销毁",
+                          "format": "code"
+                        }
+                      }
+                    },
+                    "testStyle": {
+                      "type": "string",
+                      "description": "style控件",
+                      "format": "style"
+                    },
+                    "testDate": {
+                      "type": "string",
+                      "description": "日期控件",
+                      "format": "date"
+                    },
+                    "testDateTime": {
+                      "type": "string",
+                      "description": "日期时间控件",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            },
+            "iovSchema": {
+              "componentName": "q-text",
+              "type": "文本",
+              "text": "文本组件",
+              "group": [
+                "UIB原子元件"
+              ],
+              "image": "",
+              "description": "文本组件,可以编写文字信息",
+              "eventSpecification": {
+                "inputMessage": [
+                  {
+                    "text": "更改组件数据",
+                    "eventType": "changeInfo",
+                    "messageSchema": "",
+                    "messageDemo": ""
+                  }
+                ],
+                "outputMessage": [
+                  {
+                    "text": "组件点击数据",
+                    "eventType": "click",
+                    "messageSchema": "",
+                    "messageDemo": "文本数据1"
+                  }
+                ]
+              },
+              "optionsView": {
+                "model": {
+                  "description": "组件model",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "组件id",
+                      "disabled": true
+                    },
+                    "text": {
+                      "type": "string",
+                      "description": "组件文本数据"
+                    },
+                    "contextType": {
+                      "type": "boolean",
+                      "description": "contextType"
+                    },
+                    "_onMessageMeta": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "changeInfo": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onWatchSetting": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "text": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onDOMEvent": {
+                      "type": "object",
+                      "description": "DOM事件",
+                      "properties": {
+                        "click": {
+                          "type": "array",
+                          "description": "点击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        },
+                        "dblclick": {
+                          "type": "array",
+                          "description": "双击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_lifeCycle": {
+                      "type": "object",
+                      "description": "生命周期",
+                      "properties": {
+                        "created": {
+                          "type": "string",
+                          "description": "创建",
+                          "format": "textarea"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "description": "更新",
+                          "format": "textarea"
+                        },
+                        "destroy": {
+                          "type": "string",
+                          "description": "销毁",
+                          "format": "code"
+                        }
+                      }
+                    },
+                    "testStyle": {
+                      "type": "string",
+                      "description": "style控件",
+                      "format": "style"
+                    },
+                    "testDate": {
+                      "type": "string",
+                      "description": "日期控件",
+                      "format": "date"
+                    },
+                    "testDateTime": {
+                      "type": "string",
+                      "description": "日期时间控件",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            },
+            "text": "文本组件1",
+            "text2": {
+              "a": 123
+            },
+            "testStyle": "width:100px;height:200px;background-color:rgba(3,169,244,0.8)",
+            "testDate": "2022-09-14",
+            "testDateTime": "2022-09-14 15:50:00"
+          },
+          "children": []
+        },
+        {
+          "options": {
+            "_initStyle": "position: absolute; left: 0px; top: 0px; height: 150px; width: 150px;",
+            "initStyle": "position: absolute; left: 0px; top: 0px; height: 150px; width: 150px;",
+            "_onMessageMeta": {
+              "changeInfo": [
+                "function(e) {console.log(e, self);}"
+              ]
+            },
+            "_onDOMEvent": {
+              "click": [
+                "function(e) {console.log(e);}"
+              ],
+              "dblclick": [
+                "function(e) {console.log(e, `dblclick`);}"
+              ]
+            },
+            "_onWatchSetting": {
+              "prop": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text2": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "onDOMEvent": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context, `onDOMEvent`);}"
+              ]
+            },
+            "_lifeCycle": {
+              "created":"function() {console.log(\"created\");}",
+              "updated":"function() {console.log(\"updated\");}",
+              "destroy":"function() {console.log(\"destroy\");}"
+            },
+            "_contextType": false,
+            "_attrBindRelationship": [],
+            "onMessageMeta": {
+              "changeInfo": [
+                "function(e) {console.log(e, self);}"
+              ]
+            },
+            "onDOMEvent": {
+              "click": [
+                "function(e) {console.log(e);}"
+              ],
+              "dblclick": [
+                "function(e) {console.log(e, `dblclick`);}"
+              ]
+            },
+            "onWatchSetting": {
+              "prop": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "text2": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context);}"
+              ],
+              "onDOMEvent": [
+                "function(newVal, oldVal, context) {console.log(newVal, oldVal, context, `onDOMEvent`);}"
+              ]
+            },
+            "lifeCycle": {
+              "created":"function() {console.log(\"created\");}",
+              "updated":"function() {console.log(\"updated\");}",
+              "destroy":"function() {console.log(\"destroy\");}"
+            },
+            "contextType": false,
+            "attrBindRelationship": [],
+            "_iovSchema": {
+              "componentName": "q-text",
+              "type": "文本",
+              "text": "文本组件",
+              "group": [
+                "UIB原子元件"
+              ],
+              "image": "",
+              "description": "文本组件,可以编写文字信息",
+              "eventSpecification": {
+                "inputMessage": [
+                  {
+                    "text": "更改组件数据",
+                    "eventType": "changeInfo",
+                    "messageSchema": "",
+                    "messageDemo": ""
+                  }
+                ],
+                "outputMessage": [
+                  {
+                    "text": "组件点击数据",
+                    "eventType": "click",
+                    "messageSchema": "",
+                    "messageDemo": "文本数据1"
+                  }
+                ]
+              },
+              "optionsView": {
+                "model": {
+                  "description": "组件model",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "组件id",
+                      "disabled": true
+                    },
+                    "text": {
+                      "type": "string",
+                      "description": "组件文本数据"
+                    },
+                    "contextType": {
+                      "type": "boolean",
+                      "description": "contextType"
+                    },
+                    "_onMessageMeta": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "changeInfo": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onWatchSetting": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "text": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onDOMEvent": {
+                      "type": "object",
+                      "description": "DOM事件",
+                      "properties": {
+                        "click": {
+                          "type": "array",
+                          "description": "点击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        },
+                        "dblclick": {
+                          "type": "array",
+                          "description": "双击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_lifeCycle": {
+                      "type": "object",
+                      "description": "生命周期",
+                      "properties": {
+                        "created": {
+                          "type": "string",
+                          "description": "创建",
+                          "format": "textarea"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "description": "更新",
+                          "format": "textarea"
+                        },
+                        "destroy": {
+                          "type": "string",
+                          "description": "销毁",
+                          "format": "code"
+                        }
+                      }
+                    },
+                    "testStyle": {
+                      "type": "string",
+                      "description": "style控件",
+                      "format": "style"
+                    },
+                    "testDate": {
+                      "type": "string",
+                      "description": "日期控件",
+                      "format": "date"
+                    },
+                    "testDateTime": {
+                      "type": "string",
+                      "description": "日期时间控件",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            },
+            "iovSchema": {
+              "componentName": "q-text",
+              "type": "文本",
+              "text": "文本组件",
+              "group": [
+                "UIB原子元件"
+              ],
+              "image": "",
+              "description": "文本组件,可以编写文字信息",
+              "eventSpecification": {
+                "inputMessage": [
+                  {
+                    "text": "更改组件数据",
+                    "eventType": "changeInfo",
+                    "messageSchema": "",
+                    "messageDemo": ""
+                  }
+                ],
+                "outputMessage": [
+                  {
+                    "text": "组件点击数据",
+                    "eventType": "click",
+                    "messageSchema": "",
+                    "messageDemo": "文本数据1"
+                  }
+                ]
+              },
+              "optionsView": {
+                "model": {
+                  "description": "组件model",
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "description": "组件id",
+                      "disabled": true
+                    },
+                    "text": {
+                      "type": "string",
+                      "description": "组件文本数据"
+                    },
+                    "contextType": {
+                      "type": "boolean",
+                      "description": "contextType"
+                    },
+                    "_onMessageMeta": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "changeInfo": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onWatchSetting": {
+                      "type": "object",
+                      "description": "消息元",
+                      "properties": {
+                        "text": {
+                          "type": "array",
+                          "description": "更改数据",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_onDOMEvent": {
+                      "type": "object",
+                      "description": "DOM事件",
+                      "properties": {
+                        "click": {
+                          "type": "array",
+                          "description": "点击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        },
+                        "dblclick": {
+                          "type": "array",
+                          "description": "双击事件",
+                          "items": {
+                            "type": "string",
+                            "description": "函数片段",
+                            "format": "code"
+                          }
+                        }
+                      }
+                    },
+                    "_lifeCycle": {
+                      "type": "object",
+                      "description": "生命周期",
+                      "properties": {
+                        "created": {
+                          "type": "string",
+                          "description": "创建",
+                          "format": "textarea"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "description": "更新",
+                          "format": "textarea"
+                        },
+                        "destroy": {
+                          "type": "string",
+                          "description": "销毁",
+                          "format": "code"
+                        }
+                      }
+                    },
+                    "testStyle": {
+                      "type": "string",
+                      "description": "style控件",
+                      "format": "style"
+                    },
+                    "testDate": {
+                      "type": "string",
+                      "description": "日期控件",
+                      "format": "date"
+                    },
+                    "testDateTime": {
+                      "type": "string",
+                      "description": "日期时间控件",
+                      "format": "date-time"
+                    }
+                  }
+                }
+              }
+            },
+            "text": "文本组件1",
+            "text2": {
+              "a": 123
+            },
+            "testStyle": "width:100px;height:200px;background-color:rgba(3,169,244,0.8)",
+            "testDate": "2022-09-14",
+            "testDateTime": "2022-09-14 15:50:00"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "string": {
+    "title": "字符串",
+    "type": "string",
+    "example": {
+      "example": {
+        "type": "string",
+        "description": "字段描述信息",
+        "maxLength": 20,
+        "format": "text",
+        "enum": ["枚举值1", "枚举值2", "枚举值3"]
+      }
+    }
+  },
+  "number": {
+    "title": "数值",
+    "type": "number",
+    "example": {
+      "example": {
+        "type": "number",
+        "description": "字段描述信息",
+        "maximum": 50,
+        "minimum": 0,
+        "enum": [1, 2, 3]
+      }
+    }
+  },
+  "boolean": {
+    "title": "布尔值",
+    "type": "boolean",
+    "example": {
+      "example": {
+        "type": "boolean",
+        "description": "字段描述信息"
+      }
+    }
+  },
+  "array": {
+    "title": "数组",
+    "type": "array",
+    "example": {
+      "example": {
+        "type": "array",
+        "description": "字段描述信息",
+        "items": {
+          "type": "string",
+          "description": "字段描述信息",
+          "maxLength": 20,
+          "format": "text",
+          "enum": ["枚举值1", "枚举值2", "枚举值3"]
+        }
+      }
+    }
+  },
+  "object": {
+    "title": "对象值",
+    "type": "object",
+    "example": {
+      "example": {
+        "type": "object",
+        "description": "字段描述信息",
+        "properties": {
+          "string": {
+            "type": "string",
+            "description": "字段描述信息"
+          },
+          "number": {
+            "type": "number",
+            "description": "字段描述信息"
+          },
+          "boolean": {
+            "type": "boolean",
+            "description": "字段描述信息"
+          },
+          "array": {
+            "type": "array",
+            "description": "字段描述信息",
+            "items": {
+              "type": "string",
+              "description": "字段描述信息"
+            }
+          },
+          "object": {
+            "type": "object",
+            "description": "字段描述信息",
+            "properties": {
+              "test": {
+                "type": "string",
+                "description": "字段描述信息"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

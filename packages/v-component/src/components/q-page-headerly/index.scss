@@ -1,0 +1,50 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+:host {
+  display: block;
+}
+
+:host([block]) {
+  display: block;
+}
+
+.headers {
+  height: 100%;
+  z-index: 999;
+  position: relative;
+
+  .headers-content {
+    display: flex;
+    align-items: center;
+    height: inherit;
+
+    // .header-logo {
+    //   width: 260px;
+    //   height: inherit;
+    // }
+    // .tools-group {
+    //   height: inherit;
+    //   display: flex;
+    // }
+    // .btn-group {
+    //   display: flex;
+    //   align-items: center;
+    //   position: absolute;
+    //   right: 32px;
+    //   height: inherit;
+    // }
+    .left-content,
+    .center-content,
+    .right-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .center-content {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+}

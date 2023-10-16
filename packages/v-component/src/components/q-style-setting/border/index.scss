@@ -1,0 +1,81 @@
+@use "sass:map";
+@use "sass:math";
+@import "../../../theme/common/var.scss";
+@import "../../../theme/common/mixin.scss";
+:host {
+	display: inline-block;
+}
+@include b(style-layout) {
+	width: 100%;
+
+	.row-container,
+	.row-item {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.row-container {
+		margin-top: 10px;
+		height: 32px;
+
+		.row-item {
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			flex: 1;
+			height: 100%;
+
+			.row-item-title {
+				width: 50px;
+				margin-right: 6px;
+				font-size: 12px;
+			}
+
+			.row-item-content {
+				flex: 1;
+				height: 100%;
+				display: flex;
+				align-items: center;
+			}
+
+			.next-text-inner {
+				width: 20px;
+				margin-left: 4px;
+			}
+
+			.row-item-border {
+				width: 80px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				.row-item-border-content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.row-item-border_icon {
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+				}
+			}
+
+			.row-item-border_content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	}
+}

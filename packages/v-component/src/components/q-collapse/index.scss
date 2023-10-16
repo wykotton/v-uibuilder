@@ -1,0 +1,15 @@
+.q-collapse-container{
+	height: 100%;
+	overflow: auto;
+}
+.q-collapse-wrap{
+	.collapse-item{
+		position: relative;
+		height: 200px;
+		.dropzone{
+			height: 100%;
+			width: 100%;
+			display: block;
+		}
+	}
+}

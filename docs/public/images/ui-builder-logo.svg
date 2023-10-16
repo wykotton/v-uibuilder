@@ -1,0 +1,12 @@
+<svg width="1100" height="275" xmlns="http://www.w3.org/2000/svg" fill="none" class="people-svg">
+ <defs>
+  <clipPath id="clip0_11237_126775">
+   <rect id="svg_1" x="0.49121" y="0.94141" fill="white" height="289" width="343"/>
+  </clipPath>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <text fill="#409eff" x="42.80826" y="92.56482" id="svg_4" font-size="34" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#409eff" transform="matrix(6.5505 0 0 6.98654 -255.204 -419.904)" font-weight="bold">UIBuilder</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_5" y="168.5" x="156" stroke-width="0" stroke="#000" fill="#000000"/>
+ </g>
+</svg>

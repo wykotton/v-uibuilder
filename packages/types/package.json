@@ -1,0 +1,19 @@
+{
+  "name": "@zzjz/v-uibuilder-types",
+  "version": "1.0.0",
+  "description": "业务探索工具类型库",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.2"
+  },
+  "dependencies": {
+    "@zzjz/v-component": "workspace:^",
+    "@zzjz/v-uibuilder-runtime-core": "workspace:^"
+  }
+}

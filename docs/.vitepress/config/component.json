@@ -1,0 +1,63 @@
+[
+  {
+    "text": "数据录入",
+    "collapsible": true,
+    "items": [
+      { "text": "文本输入", "link": "/component/q-input" },
+      { "text": "选择器", "link": "/component/q-select" },
+      { "text": "多选", "link": "/component/q-checkbox" },
+      { "text": "单选", "link": "/component/q-radio" },
+      { "text": "日期", "link": "/component/q-date-time" },
+      { "text": "按钮", "link": "/component/q-button" },
+      { "text": "级联选择器", "link": "/component/q-cascader" }
+    ]
+  },
+  {
+    "text": "导航",
+    "collapsible": true,
+    "items": [
+      { "text": "步骤条", "link": "/component/q-steps" },
+      { "text": "回到顶部", "link": "/component/q-back-top" },
+      { "text": "锚点", "link": "/component/q-anchor" },
+      { "text": "面包屑", "link": "/component/q-breadcrumb" },
+      { "text": "固钉", "link": "/component/q-affix" },
+      { "text": "页头", "link": "/component/q-page-headerly" },
+      { "text": "分页", "link": "/component/q-pagination" }
+    ]
+  },
+  {
+    "text": "数据展示",
+    "collapsible": true,
+    "items": [
+      { "text": "文本", "link": "/component/q-text" },
+      { "text": "表格", "link": "/component/q-tablely" },
+      { "text": "图片", "link": "/component/q-image" },
+      { "text": "幻灯片", "link": "/component/q-carousel" },
+      { "text": "tag", "link": "/component/q-tag" },
+      { "text": "时间轴", "link": "/component/q-timeline" },
+      { "text": "进度条", "link": "/component/q-progress" },
+      { "text": "骨架屏", "link": "/component/q-skeleton" },
+      { "text": "分割线", "link": "/component/q-divider" }
+    ]
+  },
+  {
+    "text": "容器",
+    "collapsible": true,
+    "items": [
+      { "text": "表单", "link": "/component/q-form" },
+      { "text": "容器", "link": "/component/q-combination" },
+      { "text": "对话框", "link": "/component/q-modal" },
+      { "text": "Row,Col", "link": "/component/q-rowCol" }
+    ]
+  },
+  {
+    "text": "插件",
+    "collapsible": true,
+    "items": [
+      { "text": "路由配置", "link": "/component/q-router-config" },
+      { "text": "配置中心", "link": "/component/q-config-center" },
+      { "text": "脚本配置", "link": "/component/q-page-script" },
+      { "text": "数据源", "link": "/component/q-data-source" }
+    ]
+  }
+]

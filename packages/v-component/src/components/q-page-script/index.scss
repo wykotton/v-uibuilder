@@ -1,0 +1,53 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.router-container {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+  /* 兼容其他浏览器，防止overflow-y: overlay不生效 */
+  overflow-y: auto;
+  overflow-y: overlay;
+  .title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .search-input {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+  }
+}
+
+.router-card {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  .card-title {
+    font-weight: 600;
+    color: #666666;
+  }
+  .card-key {
+    padding: 0 6px;
+    margin-top: 4px;
+    border-radius: 2px;
+    background-color: #eaebef;
+  }
+}

@@ -1,0 +1,21 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+:host {
+  display: block;
+  @include scroll-bar;
+}
+
+:host .ant-tree .ant-tree-node-content-wrapper .ant-tree-iconEle {
+  height: unset;
+  width: unset;
+  line-height: unset;
+}
+
+@include b(tree) {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+

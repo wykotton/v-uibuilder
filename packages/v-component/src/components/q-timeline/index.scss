@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "sass:math";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+@include b(timeline) {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+
+  p {
+    padding: 0px;
+    margin: 0px;
+  }
+}

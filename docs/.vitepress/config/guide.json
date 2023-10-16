@@ -1,0 +1,30 @@
+[
+  {
+    "text": "快速开始",
+    "collapsible": true,
+    "items": [
+      { "text": "什么是UIBuilder?", "link": "/guide/what-is-uibuilder" },
+      { "text": "新手上路", "link": "/guide/quick-start" },
+      { "text": "常见问题", "link": "/guide/faq" }
+    ]
+  },
+  {
+    "text": "应用开发",
+    "collapsible": true,
+    "items": [
+      { "text": "创建应用", "link": "/guide/create-app" },
+      { "text": "应用编辑界面", "link": "/guide/editor-interface" },
+      { "text": "组件布局排版", "link": "/guide/drag-and-drop" },
+      { "text": "事件", "link": "/guide/event-handler" },
+      { "text": "页面库", "link": "/guide/template-page" }
+    ]
+  },
+  {
+    "text": "进阶扩展",
+    "collapsible": true,
+    "items": [
+      { "text": "扩展UIBuilder", "link": "/guide/how-to-extend-uib" },
+      { "text": "扩展示例", "link": "/guide/extension-example" }
+    ]
+  }
+]

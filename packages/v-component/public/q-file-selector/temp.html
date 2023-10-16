@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文件资源管理</title>
+    <script src="../_app.config.js?v=0.0.0-1677721419252"></script>
+    <link href="./css/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css" />
+    <script type="module"> import "/v-component/assets/q-file-selector-container.js"; </script>
+    <!-- <script type="module"> import "/v-component/src/components/q-file-selector-container/q-file-selector-container.ts"; </script> -->
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui-1.10.4.custom.min.js"></script>
+    <!-- <script type="text/javascript" src="js/main.min.js"></script> -->
+    <script type="text/javascript" src="./js/jquery-dateFormat.min.js"></script>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <q-file-selector-container onload="completed()"></q-file-selector-container>
+    <div id="dlgAddFile">
+      <form name="addfile" id="frmUpload" method="post" target="frmUploadFile" enctype="multipart/form-data">
+        <!-- 文件目录 -->
+        <input type="hidden" name="filecategory" id="filecategory" value="" />
+        <!-- 所属类型 -->
+        <input type="hidden" name="filetype" id="filetype" value="" />
+        <!-- 所属标签 -->
+        <input type="hidden" name="filetag" id="filetag" value="" />
+        <div class="form"><br />
+          <input type="file" name="files[]" id="fileUploads" onchange="qfsEvent('listUploadFiles', [this.files])" multiple="multiple" />
+          <div id="uploadResult"></div>
+          <div class="uploadFilesList">
+            <div id="uploadFilesList"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="pnlRenameFile" class="dialog">
+      <span class="name"></span><br>
+      <input type="text" id="txtFileName">
+    </div>
+    <div id="dlgManageTag" class="dialog">
+      <div class="tag-list" id="filesTagList">
+        <span class="tag-start">标签：</span>
+        <span class="ant-tag" style="background: rgb(255, 255, 255); border-style: dashed;"  onclick="addTag(this)">
+          <span role="img" aria-label="plus" class="anticon anticon-plus">
+            <svg focusable="false" class="" data-icon="plus" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896"><defs><style></style></defs><path d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"></path><path d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z"></path></svg>
+          </span> 添加标签</span>
+          <input id="saveTagInput" name="title" style="display: none;"></input>
+      </div>
+    </div>
+    <div id="dlgMakeTag" class="dialog">
+      <input type="hidden" name="selectedFileId" id="selectedFileId" value="" />
+      <div class="tag-selected" id="selectedTagList"></div>
+      <div class="tag-list" id="makeTagList">
+        <span class="tag-start">标签：</span>
+      </div>
+    </div>
+    <div class="ant-spin-nested-loading" id="spin-nested-loading">
+      <div class="ant-spin ant-spin-lg ant-spin-spinning ant-spin-show-text"><span class="ant-spin-dot ant-spin-dot-spin"><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i></span><div class="ant-spin-text">加载中...</div></div>
+    </div>
+    <script src="./js/coco-message.js" language="javascript"></script>
+    <script type="text/javascript">
+      // 初始化配置ajax
+      $.ajaxSetup ({
+        cache: false,
+        headers: { 
+          Authorization: `Bearer ${sessionStorage.getItem('uibToken')}` 
+        },
+        // retryLimit : 3,
+        // success:function(result){
+        //    console.log(1)
+        // },
+        // error: function(xhr, textStatus, errorThrown){
+        //   if (textStatus == 'timeout') {
+        //     this.retryLimit--;
+        //     if (this.retryLimit) {
+        //         //try again
+        //         $.ajax(this);
+        //         return;
+        //     }            
+        //     return;
+        //   }
+        //   if (xhr.status == 401) {
+        //       $.ajaxSetup ({
+        //         headers: { 
+        //           Authorization: `Bearer ${sessionStorage.getItem('uibToken')}` 
+        //         }
+        //       })
+        //       $.ajax(this);
+        //       return;
+        //   } else {
+        //       //handle error
+        //   }
+        // }
+      });
+      const qfs = document.querySelector('q-file-selector-container')
+      function qfsEvent(eventName, params) {
+        qfs[eventName].apply(this, params)
+      }
+      function completed() {
+        $('#spin-nested-loading').hide()
+        $('#filetype').val(qfs.type)
+        $('#filecategory').val(qfs.category)
+        $('#filetag').val(qfs.tag)
+        $('#saveTagInput').keydown(function(event) {
+          if (event.keyCode == 13) {
+            console.log(this, event)
+            qfs.onFilesApi.addTag({title: this.value.trim()}).then((res) => {
+              $(this).hide().prev().show()
+              qfs.onTagManage.getTag()
+              qfs.getTag()
+            })
+          }
+        });
+        $('#filesTagList').on('click', '.anticon-close', function(e){
+          console.log($(this).parent().data('id'))
+          const id = $(this).parent().data('id')
+          // qfs.onTagManage.delTag([id])
+          qfs.onFilesApi.delTag({ids: [id]}).then(() => {
+            $(this).parent().remove()
+            qfs.getTag()
+          })
+        })
+        $('#makeTagList').on('click', '.tag-item', function(e){
+          $(this).toggleClass('ant-tag-has-color')
+
+          const selectedTagDom = $('#makeTagList').find('.ant-tag-has-color')
+          let selectedTagHtml = ''
+          if (selectedTagDom.length) {
+            selectedTagHtml = '<span class="tag-start">已选标签：</span>'
+            // 追加
+            for (let i = 0; i < selectedTagDom.length; i++) {
+              const element = selectedTagDom[i];
+              const title = element.getAttribute('title')
+              const id = element.getAttribute('data-id')
+              if (!qfs.onTagMake.selectedTag.filter(v => v.id === id).length) qfs.onTagMake.selectedTag.push({ title, id })
+            }
+            qfs.onTagMake.selectedTag.map(v => {
+              selectedTagHtml += `<span class="ant-tag tag-item" title="${v.title}" data-id="${v.id}">${v.title}</span>`
+            })
+          }
+          $('#selectedTagList').html(selectedTagHtml)
+          // console.log($(this).parent().data('id'))
+          // const id = $(this).parent().data('id')
+          // // qfs.onTagManage.delTag([id])
+          // qfs.onFilesApi.delTag({ids: [id]}).then(() => {
+          //   $(this).parent().remove()
+          // })
+        })
+      }
+      function addTag(e) {
+        console.log(e)
+        qfs.onTagManage.addTag(e)
+      }
+      function removeUpload(i){
+        qfs.removeUpload(i)
+      }
+    </script>
+  </body>
+</html>
+

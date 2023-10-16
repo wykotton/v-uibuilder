@@ -1,0 +1,42 @@
+@use "sass:map";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+:host {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.attribute-container {
+  height: 100%;
+  padding: 20px;
+  overflow-x: hidden;
+  /* 兼容其他浏览器，防止overflow-y: overlay不生效 */
+  overflow-y: auto;
+  overflow-y: overlay;
+}
+.attribute-card {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  .attribute-title {
+    font-weight: 600;
+    color: #666666;
+  }
+  .attribute-key {
+    padding: 0 6px;
+    margin-top: 4px;
+    border-radius: 2px;
+    background-color: #eaebef;
+  }
+}

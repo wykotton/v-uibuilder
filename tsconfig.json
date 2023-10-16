@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["es2017", "dom", "dom.iterable"],
+    "declaration": true,
+    "outDir": "./types",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true, 
+    "useDefineForClassFields": false,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@zzjz/v-uibuilder-*": ["./*/src"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/types/*.d.ts", ".eslintrc.js"],
+  "exclude": ["**/tests/*", "**/*.test.ts", "**/lib", "**/es", "node_modules"],
+  "references": [],
+  "emitDecoratorMetadata": true,
+  "experimentalDecorators": true
+}

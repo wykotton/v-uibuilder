@@ -1,0 +1,28 @@
+{
+  "website_name": "UIBuilder",
+  "copyright": "© 2021 http://www.zzjunzhi.com/ MIT license",
+  "version": "v1.2.2",
+  "sentry_dsn": "http://e0470dc973774eec9b5d5212291c4366@192.168.21.46:9000/3",
+  "component_warehouse": [
+    {
+      "name": "uib",
+      "url": "http://localhost:3000/demo2.html"
+    },
+    {
+      "name": "deepCharts",
+      "url": "http://192.168.21.103:6098/deepCharts/components/pelComponents.html"
+    },
+    {
+      "name": "deepChartsL",
+      "url": "http://192.168.21.82:6096/deepCharts/components/pelComponents.html"
+    }
+  ],
+  "end_to_end": [
+    {
+      "name": "",
+      "type": "",
+      "method": "function(query) { return query; }"
+    }
+  ],
+  "component_loading_timeout": 5
+}

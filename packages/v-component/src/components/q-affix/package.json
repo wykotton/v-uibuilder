@@ -1,0 +1,10 @@
+{
+	"name": "q-affix",
+	"version": "1.0.0",
+	"description": "固钉",
+	"main": "q-affix.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "node webhook.js"
+	}
+}

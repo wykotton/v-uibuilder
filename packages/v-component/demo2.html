@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>v-component</title>
+  </head>
+  <body></body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+  </style>
+  <body>
+    <div
+      depot="true"
+      list='[
+        {"componentName":"q-text","componentPath":"/v-component/assets/q-text.js","options":{"text":"文本组件1"},"group":["UIB原子组件"],"text":"文本","type":"文本"}, 
+        {"componentName":"q-button","componentPath":"/v-component/assets/q-button.js","options":{"text":"按钮1"},"group":["UIB原子组件"],"text":"按钮","type":"文本"},
+        {"componentName":"q-form","componentPath":"/v-component/assets/q-form.js","options":{},"group":["UIB原子组件"],"text":"表单容器","type":"容器"},
+        {"componentName":"q-collapse","componentPath":"/v-component/assets/q-collapse.js","options":{},"group":["UIB原子组件"],"text":"折叠面板","type":"容器"},
+        {"componentName":"q-popoverly","componentPath":"/v-component/assets/q-popoverly.js","options":{},"group":["UIB原子组件"],"text":"气泡卡片","type":"容器"},
+        {"componentName":"q-spinly","componentPath":"/v-component/assets/q-spinly.js","options":{},"group":["UIB原子组件"],"text":"加载中","type":"容器"},
+        {"componentName":"q-collapse-menu","componentPath":"/v-component/assets/q-collapse-menu.js","options":{},"group":["UIB原子组件"],"text":"折叠菜单","type":"容器"},
+        {"componentName":"q-flow-menu","componentPath":"/v-component/assets/q-flow-menu.js","options":{},"group":["UIB原子组件"],"text":"浮动菜单","type":"容器"},
+        {"componentName":"q-tree","componentPath":"/v-component/assets/q-tree.js","options":{},"group":["UIB原子组件"],"text":"树","type":"容器"},
+        {"componentName":"q-tag","componentPath":"/v-component/assets/q-tag.js","options":{},"group":["UIB原子组件"],"text":"tag标签","type":"文本"},
+        {"componentName":"q-row","componentPath":"/v-component/assets/q-row.js","options":{},"group":["UIB原子组件"],"text":"row","type":"容器"},
+        {"componentName":"q-col","componentPath":"/v-component/assets/q-col.js","options":{},"group":["UIB原子组件"],"text":"col","type":"容器"},
+        {"componentName":"q-timeline","componentPath":"/v-component/assets/q-timeline.js","options":{},"group":["UIB原子组件"],"text":"时间轴","type":"文本"},
+        {"componentName":"q-steps","componentPath":"/v-component/assets/q-steps.js","options":{},"group":["UIB原子组件"],"text":"步骤条","type":"文本"},
+        {"componentName":"q-back-top","componentPath":"/v-component/assets/q-back-top.js","options":{},"group":["UIB原子组件"],"text":"回到顶部","type":"文本"},
+        {"componentName":"q-skeleton","componentPath":"/v-component/assets/q-skeleton.js","options":{},"group":["UIB原子组件"],"text":"骨架屏","type":"文本"},
+        {"componentName":"q-progress","componentPath":"/v-component/assets/q-progress.js","options":{},"group":["UIB原子组件"],"text":"进度条","type":"文本"},
+        {"componentName":"q-anchor","componentPath":"/v-component/assets/q-anchor.js","options":{},"group":["UIB原子组件"],"text":"锚点","type":"文本"},
+        {"componentName":"q-affix","componentPath":"/v-component/assets/q-affix.js","options":{},"group":["UIB原子组件"],"text":"固钉","type":"文本"},
+        {"componentName":"q-paginationly","componentPath":"/v-component/assets/q-paginationly.js","options":{},"group":["UIB原子组件"],"text":"分页","type":"文本"},
+        {"componentName":"q-input","componentPath":"/v-component/assets/q-input.js","options":{},"group":["UIB原子组件"],"text":"输入框","type":"表单"},
+        {"componentName":"q-cascader","componentPath":"/v-component/assets/q-cascader.js","options":{},"group":["UIB原子组件"],"text":"级联选择","type":"表单"},
+        {"componentName":"q-divider","componentPath":"/v-component/assets/q-divider.js","options":{},"group":["UIB原子组件"],"text":"分割线","type":"文本"},
+        {"componentName":"q-breadcrumb","componentPath":"/v-component/assets/q-breadcrumb.js","options":{},"group":["UIB原子组件"],"text":"面包屑","type":"文本"},
+        {"componentName":"q-page-headerly","componentPath":"/v-component/assets/q-page-headerly.js","options":{},"group":["UIB原子组件"],"text":"页头","type":"文本"},
+        {"componentName":"q-switch","componentPath":"/v-component/assets/q-switch.js","options":{},"group":["UIB原子组件"],"text":"switch开关","type":"容器"},
+        {"componentName":"q-flex-box","componentPath":"/v-component/assets/q-flex-box.js","options":{},"group":["UIB原子组件"],"text":"弹力盒子","type":"容器"},
+        {"componentName":"q-grid-box","componentPath":"/v-component/assets/q-grid-box.js","options":{},"group":["UIB原子组件"],"text":"网格布局","type":"容器"},
+        {"componentName":"q-shrink","componentPath":"/v-component/assets/q-shrink.js","options":{},"group":["UIB原子组件"],"text":"收缩面板","type":"容器"},
+        {"componentName":"q-tablely","componentPath":"/v-component/assets/q-tablely.js","options":{},"group":["UIB原子组件"],"text":"表格","type":"容器"},
+        {"componentName":"q-modal","componentPath":"/v-component/assets/q-modal.js","options":{},"group":["UIB原子组件"],"text":"模态窗","type":"容器"},
+		    {"componentName":"q-drawer","componentPath":"/v-component/assets/q-drawer.js","options":{},"group":["UIB原子组件"],"text":"抽屉","type":"容器"},
+        {"componentName":"q-select","componentPath":"/v-component/assets/q-select.js","options":{},"group":["UIB原子组件"],"text":"下拉框","type":"表单"},
+        {"componentName":"q-checkbox-group","componentPath":"/v-component/assets/q-checkbox-group.js","options":{},"group":["UIB原子组件"],"text":"复选框组","type":"表单"},
+        {"componentName":"q-radio-group","componentPath":"/v-component/assets/q-radio-group.js","options":{},"group":["UIB原子组件"],"text":"单选框组","type":"表单"},
+        {"componentName":"q-input-number","componentPath":"/v-component/assets/q-input-number.js","options":{},"group":["UIB原子组件"],"text":"数字输入框","type":"表单"},
+        {"componentName":"q-date-time","componentPath":"/v-component/assets/q-date-time.js","options":{},"group":["UIB原子组件"],"text":"时间选择器","type":"表单"},
+        {"componentName":"q-color-picker","componentPath":"/v-component/assets/q-color-picker.js","options":{},"group":["UIB原子组件"],"text":"颜色选择器","type":"表单"},
+        {"componentName":"q-image","componentPath":"/v-component/assets/q-image.js","options":{},"group":["UIB原子组件"],"text":"图片","type":"媒体"},
+        {"componentName":"q-carousel","componentPath":"/v-component/assets/q-carousel.js","options":{},"group":["UIB原子组件"],"text":"走马灯","type":"媒体"},
+        {"componentName":"q-router-config","componentPath":"/v-component/assets/q-router-config.js","options":{},"group":["UIB原子组件"],"text":"路由配置","type":"插件"},
+        {"componentName":"q-attribute-bind","componentPath":"/v-component/assets/q-attribute-bind.js","options":{},"group":["UIB原子组件"],"text":"属性绑定","type":"插件"},
+        {"componentName":"q-config-center","componentPath":"/v-component/assets/q-config-center.js","options":{},"group":["UIB原子组件"],"text":"配置中心","type":"插件"},
+        {"componentName":"q-real-time","componentPath":"/v-component/assets/q-real-time.js","options":{},"group":["UIB原子组件"],"text":"实时时间","type":"文本"},
+        {"componentName":"q-page-script","componentPath":"/v-component/assets/q-page-script.js","options":{},"group":["UIB原子组件"],"text":"脚本配置","type":"插件"},
+        {"componentName":"q-data-source","componentPath":"/v-component/assets/q-data-source.js","options":{},"group":["UIB原子组件"],"text":"API数据源","type":"插件"},
+        {"componentName":"q-file-selector","componentPath":"/v-component/assets/q-file-selector.js","options":{},"group":["UIB原子组件"],"text":"文件选择器","type":"插件"},
+        {"componentName":"q-upload","componentPath":"/v-component/assets/q-upload.js","options":{},"group":["UIB原子组件"],"text":"上传","type":"表单"},
+        {"componentName":"q-scroll-box","componentPath":"/v-component/assets/q-scroll-box.js","options":{},"group":["UIB原子组件"],"text":"滚动盒子","type":"容器"},
+        {"componentName":"q-dynamic-tabs","componentPath":"/v-component/assets/q-dynamic-tabs.js","options":{},"group":["UIB原子组件"],"text":"动态选项卡","type":"容器"},
+        {"componentName":"q-percentage","componentPath":"/v-component/assets/q-percentage.js","options":{},"group":["UIB原子组件"],"text":"百分比容器","type":"容器"},
+        {"componentName":"q-child-page","componentPath":"/v-component/assets/q-child-page.js","options":{},"group":["UIB原子组件"],"text":"子页面容器","type":"容器"},
+        {"componentName":"q-attribute-setting","componentPath":"/v-component/assets/q-attribute-setting.js","options":{},"group":["UIB原子组件"],"text":"属性编辑器","type":"插件"},
+        {"componentName":"q-split-panes","componentPath":"/v-component/assets/q-split-panes.js","options":{},"group":["UIB原子组件"],"text":"分割面板","type":"容器"},
+        {"componentName":"q-contextmenu","componentPath":"/v-component/assets/q-contextmenu.js","options":{},"group":["UIB原子组件"],"text":"右键菜单","type":"容器"},
+        {"componentName":"q-dropdown","componentPath":"/v-component/assets/q-dropdown.js","options":{},"group":["UIB原子组件"],"text":"下拉菜单","type":"容器"}]'
+    ></div>
+  </body>
+  <script>
+    window.addEventListener("uib", (data) => {
+      const { detail = {} } = data;
+      const { type, reply, body } = detail;
+      const { resolve, reject } = reply;
+      console.log(body);
+
+      runCode(body);
+      resolve && resolve();
+    });
+
+    async function runCode(body = {}) {
+      if (typeof body !== "object") return;
+      const { fn, fnData } = body;
+      fn && (await fn(fnData));
+    }
+  </script>
+</html>

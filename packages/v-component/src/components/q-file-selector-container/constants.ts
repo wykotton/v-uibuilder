@@ -1,0 +1,1 @@
+export const staticBaseUrl = import.meta.env?.VITE_GLOB_FILES_ADDRESS || window["__PRODUCTION____APP__CONF__"]?.VITE_GLOB_FILES_ADDRESS || '/v-file-server';

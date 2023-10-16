@@ -1,0 +1,9 @@
+# Logs
+logs
+*.log
+vite.config.ts
+
+node_modules
+dist
+dist-ssr
+.vitepress/cache

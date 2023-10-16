@@ -1,0 +1,44 @@
+.q-file-selector-container{
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  
+  &::-webkit-scrollbar {
+    height: 8px !important;
+    width: 8px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0 !important;
+    border-style: dashed;
+    background-color: rgb(156, 157, 160);
+    border-color: transparent;
+    // border-top-width: 6px;
+    // border-left-width: 6px;
+    // border-bottom-width: 0;
+    // border-right-width: 0;
+    background-clip: content-box;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--theme-color);
+    border-radius: 6px !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .hack-mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  iframe{
+    border: none;
+  }
+}

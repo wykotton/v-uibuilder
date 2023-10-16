@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 当前分支
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+if [ ${branch} == "release" ]
+then
+  node ./packages/v-uibuilder-server/version.js test
+  git add ./packages/v-uibuilder-server/env-test/ui-config.json
+	git commit -m "jenkins自动版本"
+  exit 0
+fi
+exit 0

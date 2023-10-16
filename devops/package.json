@@ -1,0 +1,14 @@
+{
+	"name": "uib-devops",
+	"version": "1.0.0",
+	"description": "UIB-devops搭建版本管理简易流程",
+	"main": "webhook.js",
+	"private": true,
+	"license": "UNLICENSED",
+	"scripts": {
+		"start": "node webhook.js"
+	},
+	"dependencies": {
+		"gitlab-webhook-handler": "^1.0.1"
+	}
+}

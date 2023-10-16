@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "website_name": "UIBuilder",
+  "app_publish_path": "http://192.168.21.46:3011/deepCharts/out/js/bundle.js",
+  "app_pic_path": "http://192.168.21.46:3011/deepCharts/imgs/customed/",
+  "app_all_pel_path": "http://192.168.21.46:3011/deepCharts/pelList/list",
+  "data": {},
+  "used": 1,
+  "copyright": "© 2021 http://www.zzjunzhi.com/ MIT license",
+  "deepinsight_path": "http://192.168.11.102:6093/api/rest/queryAllConfig.rest",
+  "app_publish_ip": "http://192.168.21.46:3011",
+  "app_theme_color": "rgba(0,0,0,1)",
+  "app_cavans_color": "rgba(255,255,255,1)",
+  "is_grid": true,
+  "version": "v2.0.22",
+  "component_warehouse": [
+    {
+      "name": "uib",
+      "url": "http://192.168.21.46:5102/index.html"
+    }
+  ]
+}

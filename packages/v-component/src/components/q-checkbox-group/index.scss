@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "sass:math";
+@import "../../theme/common/var.scss";
+@import "../../theme/common/mixin.scss";
+
+@include b(checkbox-group) {
+  font-size: inherit;
+  color: inherit;
+  height: inherit;
+
+  &::after {
+    width: 100%;
+    content: "";
+    display: inline-block;
+  }
+}

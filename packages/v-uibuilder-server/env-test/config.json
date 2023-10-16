@@ -1,0 +1,41 @@
+{
+  "port": 3200,
+  "wsPort": 6088,
+  "dbConfig": {
+    "host": "localhost",
+    "port": "3306",
+    "user": "zzjz",
+    "password": "wJ6tAgSqJidznI98esvA",
+    "database": "ui_builder2",
+    "options": {
+      "encrypt": false
+    },
+    "pool": {
+      "min": 0,
+      "max": 10,
+      "idleTimeoutMillis": 3000
+    },
+    "multipleStatements": true,
+    "max_connections": 10,
+    "connectionLimit": 100,
+    "connectTimeout": 2000,
+    "queueLimit": 0,
+    "debug": false,
+    "waitForConnection": true,
+    "dateStrings": true
+  },
+  "logConfig": {
+    "name": "UI-builder",
+    "streams": [
+      {
+        "type": "rotating-file",
+        "path": "./public/log/logs.log",
+        "period": "1d",
+        "count": 7
+      }
+    ]
+  },
+  "requestConfig": {
+    "allowlist": ["http://localhost:6086", "http://192.168.21.46:5001", "http://192.168.21.46:5101", "/^(http|https):\/\/.*:6086/", "/^(http|https):\/\/.*:5001/", "/^(http|https):\/\/.*:5101/"]
+  }
+}
